@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  ruby:
+    build:
+      dockerfile: Dockerfile
+    tty: true
+    stdin_open: true
+    working_dir: /app
+    volumes:
+      - .:/app
+      - /app/vendor/bundle
