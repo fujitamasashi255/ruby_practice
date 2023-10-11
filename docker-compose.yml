@@ -9,4 +9,7 @@ services:
     working_dir: /app
     volumes:
       - .:/app
-      - /app/vendor/bundle
+      - bundle:/app/vendor/bundle
+
+volumes:
+  bundle:
