@@ -1,0 +1,2 @@
+# for rspec --only-failures flag
+spec/examples.txt
