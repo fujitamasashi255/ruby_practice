@@ -65,6 +65,12 @@ RSpec.describe 'pattern matching' do
         expect((hash in {})).to be_falsy
         expect(({} in {})).to be_truthy
       end
+
+      xit 'Note that only symbol keys are supported for hash patterns.', :error do
+        # hash = { "a" => 1, "b" => "a", c: :hoge, d: { e: "e" } }
+        # hash in { "a" => Integer } 
+        # syntax error, unexpected terminator, expecting literal content or tSTRING_DBEG or tSTRING_DVAR or tLABEL_END
+      end
     end
 
     context '<expression> => <pattern>' do
@@ -173,5 +179,11 @@ RSpec.describe 'pattern matching' do
   # Todo
   xdescribe 'variable pinning' do
     it 'テスト' do; end
+  end
+  
+  xdescribe 'deconstruct' do
+  end
+
+  xdescribe 'deconstruct_keys' do
   end
 end
